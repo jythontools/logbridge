@@ -5,25 +5,21 @@ The Logbridge project bridges Python's [logging][] library and the
 [Simple Logging Facade for Java][SLF4J] (SLF4J). The actual code is
 about 1 page of Python, so this is quite straightforward.
 
-Until this branch is merged into trunk for Jython, you will need to
-use the socket-reboot branch of Jython; install from here:
-https://bitbucket.org/jimbaker/jython-socket-reboot For more details
-on setting Jython up from source, refer to the [Jython developer guide][].
-
 The rest of this README assumes the Jython command is aliased as
-`jython-srb`.
+`jython27`. For more details on setting Jython up from source, refer
+to the [Jython developer guide][].
 
 Install Logbridge as usual into `site-packages`:
 
 ````bash
-$ jython-srb setup.py install
+$ jython27 setup.py install
 ````
 
 Tests will be formalized shortly. For now you can simply try this
 example:
 
 ````bash
-$ (cd tests && CLASSPATH=./slf4j-api-1.7.7.jar:./slf4j-simple-1.7.7.jar jython-srb test_logbridge.py)
+$ (cd tests && CLASSPATH=./slf4j-api-1.7.7.jar:./slf4j-simple-1.7.7.jar jython27 test_logbridge.py)
 ````
 
 SLF4J always requires two jars. So assuming we are running 1.7.7 of
